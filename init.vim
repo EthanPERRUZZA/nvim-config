@@ -1,8 +1,9 @@
 source ~/.config/nvim/plugin.vim
 source ~/.config/nvim/keymap.vim
+
 lua require("color")
 lua require("coc-shortcuts")
-" lua require("start")
+lua require("start")
 
 " Merge the clipboard 
 set clipboard=unnamedplus
@@ -72,7 +73,6 @@ set wildmode=list,full
 set wildignore=*.o,*.obj
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
-
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
@@ -92,8 +92,8 @@ let g:airline_symbols.maxlinenr = '☰ '
 let g:airline_symbols.dirty='⚡'
 
 let g:airline#extensions#coc#enabled = 1
-let g:airline#extensions#coc#error_symbol = 'E:'
-let g:airline#extensions#coc#warning_symbol = 'W:'
+let g:airline#extensions#coc#error_symbol = ' '
+let g:airline#extensions#coc#warning_symbol = ' '
 let g:airline#extensions#coc#show_coc_status = 1
 let g:airline#extensions#coc#stl_format_err = '%C(L%L)'
 let g:airline#extensions#coc#stl_format_warn = '%C(L%L)'
@@ -107,3 +107,8 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
+
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>

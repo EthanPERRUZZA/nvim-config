@@ -2,10 +2,13 @@ call plug#begin()
 
 Plug 'sainnhe/everforest'
 
-Plug 'preservim/nerdtree'
-" Plug 'm4xshen/autoclose.nvim'
+Plug 'preservim/nerdtree' |
+            \ Plug 'Xuyuanp/nerdtree-git-plugin' |
+            \ Plug 'ryanoasis/vim-devicons'
 
 Plug 'vim-airline/vim-airline'
+
+Plug 'booperlv/nvim-gomove'
 
 Plug 'lewis6991/gitsigns.nvim'
 
