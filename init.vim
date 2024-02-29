@@ -58,6 +58,9 @@ set showmatch
 " Use highlighting when doing a search.
 set hlsearch
 
+" new line display
+set list listchars=tab:>\ ,trail:-,eol:$
+
 " Change Cursor to line 
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
